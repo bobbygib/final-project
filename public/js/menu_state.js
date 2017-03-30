@@ -11,13 +11,13 @@ function menu_state(game, menu_music, cine) {
 	this.create = function() {
 		menu_music.create();
 
-		var menu = game.add.sprite(-275, -200, 'denver');
-		var menu = game.add.sprite(-275, -200, 'shade');
-		var menu = game.add.sprite(-245, -240, 'menu_text')
+		var menu = game.add.sprite(0, 0, 'denver');
+		var menu = game.add.sprite(0, 0, 'shade');
+		var menu = game.add.sprite(0, -50, 'menu_text')
 
 		enterGame = game.input.keyboard.addKey(Phaser.Keyboard.ENTER)
 
-		this.game.world.scale.setTo(.8, .8);
+		this.game.world.scale.setTo(.75, .75);
 
 		graphics = game.add.graphics(0, 0);
 		graphics.drawRect(-550, -400, 2200, 1600)

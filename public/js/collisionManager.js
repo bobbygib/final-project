@@ -10,6 +10,7 @@ function CollisionManager(game, cat, floor, npcs, walkway, windowsills, hairball
 	var cursors;
 	var game_over;
 	var restart_game;
+	var done = false;
 
 
 	this.create = function() {
@@ -96,7 +97,8 @@ function CollisionManager(game, cat, floor, npcs, walkway, windowsills, hairball
 	}
 
 	this.update = function() {
-		if(game_over.visible && restart_game.isDown){
+		if(!done && game_over.visible && restart_game.isDown){
+			done = true
 			game.sound.stopAll();
 			game.state.restart("Level_1")
 			console.log('restart is down')

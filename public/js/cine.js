@@ -18,24 +18,25 @@ function cine(game, menu_state) {
 
 
 	this.create = function() {
+		this.game.world.scale.setTo(.75, .75);
 		game.physics.startSystem(Phaser.Physics.P2JS);
 		skip = game.input.keyboard.addKey(Phaser.Keyboard.ENTER)
 
 
-		denver = game.add.sprite(-275, -200, 'denver');
-		grass = game.add.sprite(-275, -200, 'grass');
-		bed = game.add.sprite(-275, -200, 'bed');
-		home = game.add.sprite(-275, -200, 'home');
+		denver = game.add.sprite(0, 0, 'denver');
+		grass = game.add.sprite(0, 0, 'grass');
+		bed = game.add.sprite(0, 0, 'bed');
+		home = game.add.sprite(0, 0, 'home');
 
-		cat_cine = game.add.sprite(300, 450, 'oos')
+		cat_cine = game.add.sprite(550, 650, 'oos');
 		cat_cine.scale.set(.6);
 		cat_cine.anchor.setTo(.5, .5);
 		cat_cine.visible = false;
 
-		berby = game.add.sprite(-225, -175, 'berby')
+		berby = game.add.sprite(0, 0, 'berby')
 		berby.visible = false;
 
-		oos_talk = game.add.sprite(-225, 400, 'oos_talk')
+		oos_talk = game.add.sprite(0, 600, 'oos_talk')
 		oos_talk.visible = false;
 
 		//game.physics.p2.enable(cat_cine)
@@ -64,8 +65,8 @@ function cine(game, menu_state) {
 			oos_talk.visible = false;
 			home.visible = true;
 			bed.visible = false;
-			cat_cine.x = 300;
-			cat_cine.y = 450;
+			cat_cine.x = 550;
+			cat_cine.y = 650;
 			console.log('c')
 		}else if(framTimer <= 11){
 			cat_cine.x += 2;
@@ -73,8 +74,8 @@ function cine(game, menu_state) {
 		}else if(framTimer <= 11.01){
 			home.visible = false;
 			grass.visible = true;
-			cat_cine.x = -100
-			cat_cine.y = 450
+			cat_cine.x = 100
+			cat_cine.y = 650
 			console.log('e')
 		}else if(framTimer <= 16){
 			cat_cine.x += 2;
