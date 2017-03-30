@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<script src="./node_modules/phaser-ce/build/phaser.min.js"></script>
+	<script src="./js/menu_state.js"></script>
+	<script src="./js/cat.js"></script>
+	<script src="./js/bgmanager.js"></script>
+	<script src="./js/collisionManager.js"></script>
+	<script src="./js/camera.js"></script>
+	<script src="./js/npc.js"></script>
+	<script src="./js/floor.js"></script>
+	<script src="./js/walkway.js"></script>
+	<script src="./js/windowsills.js"></script>
+	<script src="./js/music.js"></script>
+	<script src="./js/hairball.js"></script>
+	<script src="./js/lighting.js"></script>
+	<script src="./js/cine.js"></script>
+	<script src="./js/menu_music.js"></script>
+	<script src="./js/to_be_con.js"></script>
+	<script src="./js/level_1.js"></script>
+	<script>
+		(function() {
+			var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'oos');
+			game.state.add("Menu", menu_state)
+			game.state.add("Cine",cine)
+			game.state.add("Level_1",level_1);
+			// game.state.add("Pause",pause);
+			// game.state.add("GameOver",gameOver);
+			// game.state.add("Winner",To_be_con);
+			//game.state.restart("Restart");
+			game.state.start("Menu");
+		})();
+</script>
+	<title>OOS</title>
+</head>
+<body>
+	<div id="tutorial" ></div>
+</body>
+</html>
