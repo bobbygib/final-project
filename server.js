@@ -20,6 +20,6 @@ app.use(function(err, req, res, next) {
 
 
 // Actually Start the Server
-app.listen(8080, function() {
+app.listen(process.env.PORT || 8080, function() {
 	console.log("server started on port 8080");
 });
